@@ -1,0 +1,4 @@
+#!/usr/bin/awk
+awk '{
+	split($0,arr," ")
+}' test.txt

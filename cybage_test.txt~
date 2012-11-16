@@ -1,0 +1,38 @@
+We need to create a shell script which will automate longbow deployment  process on local servers. 
+Currently we follow below steps one by one which needs to be automated. 
+Shell script will accept the folder name where build has to be deployed and another argument would be SVN url.
+
+Kindly work on this request whenever you get time. Thanks
+
+##   DEPLOYING UI   ## 
+    [Where] EQUINOX (172.27.38.108)
+
+        shell> cd /home/dharmeshp/
+        shell> rm -Rf wag.dharmeshp.frontend
+        shell> svn co http://svn.cybageusap.com/repos/skuentry/frontend/branches/3.26/ wag.dharmeshp.frontend
+        shell> svn co https://svn.usautoparts.com/repos/LONGBOW/branches/Catalog-3.24/ wag.dharmeshp.frontend
+
+        shell> cd /home/dharmeshp/wag.dharmeshp.frontend
+
+        shell> mkdir -p /home/dharmeshp/wag.dharmeshp.frontend/vi/tmp/lock
+
+        shell> chmod -R 777 /home/dharmeshp/wag.dharmeshp.frontend/vi/tmp
+        shell> chmod -R 777 /home/dharmeshp/wag.dharmeshp.frontend/error_logs
+        shell> chmod -R 777 /home/dharmeshp/wag.dharmeshp.frontend/tmp
+        shell> chmod -R 777 /home/dharmeshp/wag.dharmeshp.frontend/sku_entry/tmp
+        shell> chmod -R 777 /home/dharmeshp/wag.dharmeshp.frontend/sku_entry/services/moto_services/log
+
+        shell> ln -s /data/longbow/legacy_catalog/images/product_family_assets /home/dharmeshp/wag.dharmeshp.frontend/images/product_family_assets
+        shell> rm -rf /home/dharmeshp/wag.dharmeshp.frontend/images/logos
+        shell> ln -s /data/longbow/legacy_catalog/images/logos /home/dharmeshp/wag.dharmeshp.frontend/images/logos
+
+        shell> ln -s /data/longbow/legacy_catalog/images/wag_category /home/dharmeshp/wag.dharmeshp.frontend/images/wag_category
+        shell> ln -s /data/longbow/legacy_catalog/images/wag_subcategory /home/dharmeshp/wag.dharmeshp.frontend/images/wag_subcategory
+                               
+                             shell> cd /home/dharmeshp/wag.dharmeshp.frontend/version1/reports
+                                shell> rm -rf exports imports
+                               
+                                shell> ln -s /data/longbow/mount/exports /home/dharmeshp/wag.dharmeshp.frontend/version1/reports/exports
+                                shell> ln -s /data/longbow/mount/imports /home/dharmeshp/wag.dharmeshp.frontend/version1/reports/imports
+                                shell> chmod -R 777 /home/dharmeshp/wag.dharmeshp.frontend
+
