@@ -1,2 +1,0 @@
-linbynd adm cdrom sudo dip plugdev lpadmin sambashare libvirtd
-Git Test
