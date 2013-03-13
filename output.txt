@@ -1,0 +1,23 @@
+Script started on Sunday 20 January 2013 11:08:46 PM IST
+[01;31mlinbynd-Inspiron[01;34m scripts #[00m bash user_creation.sh init 6[Kbash user_creation.sh 
+Creating User user1 with the a comment field "what there are u......"
+Creating User user2 with the a comment field "new what......"
+Creating User user3 with the a comment field "that ehehehhe......"
+Do you want to change the home directory for user1 [Y|N]: Y
+1) Solaris
+2) Redhat
+Please Select a Home Directory choice: 1
+changing home directory to Solaris system....
+Do you want to change the home directory for user2 [Y|N]: Y
+1) Solaris
+2) Redhat
+Please Select a Home Directory choice: 2
+changing home directory to Redhat system....
+Do you want to change the home directory for user3 [Y|N]: Y
+1) Solaris
+2) Redhat
+Please Select a Home Directory choice: 1
+changing home directory to Solaris system....
+[01;31mlinbynd-Inspiron[01;34m scripts #[00m exit
+
+Script done on Sunday 20 January 2013 11:09:09 PM IST
