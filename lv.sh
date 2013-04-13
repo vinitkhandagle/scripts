@@ -10,5 +10,4 @@ do
     echo -e "U "
     sleep 0.1
     count="$count + 1"
-    
 done

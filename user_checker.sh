@@ -22,7 +22,7 @@ group_check()
        for i in $usr_groups
        do 
        groups=$i
-       grep -w $groups /etc/sudoers > /dev/null || grep -wE [%][@]$groups /etc/sudoers > /dev/null
+       grep -w $groups /etc/sudoers > /dev/null || grep -wE $groups /etc/sudoers > /dev/null
             if [[ $? = 0 ]]
             then
                 echo "Groups that the user Belongs to has Sudo rights"
